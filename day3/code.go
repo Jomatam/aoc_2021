@@ -8,8 +8,10 @@ import (
 
 var bits int
 
-func Run() {
-	lines := helpers.Getlines("day3/input.txt")
+const fallback = "day3/input.txt"
+
+func Run(path string) (int, int) {
+	lines := helpers.Getlines(path, fallback)
 	bits = len(lines[0])
 
 	ints := make([]int, len(lines))
@@ -25,6 +27,8 @@ func Run() {
 	o := getmostsimilar(ints, true)
 	c := getmostsimilar(ints, false)
 	fmt.Println(o * c)
+
+	return gamma * epsilon, o * c
 }
 
 func getmostsimilar(ints []int, most bool) int {

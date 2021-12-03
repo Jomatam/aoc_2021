@@ -8,8 +8,10 @@ import (
 	"strings"
 )
 
+const path = "infi/input.txt"
+
 func Run() {
-	lines := helpers.Getlines("infi/input.txt")
+	lines := helpers.Getlines(path, path)
 	things := getthings(lines)
 	amounts := getamounts(things)
 	missing, _ := strconv.Atoi(strings.Split(lines[0], " ")[0])

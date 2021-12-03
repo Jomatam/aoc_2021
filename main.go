@@ -9,13 +9,24 @@ import (
 )
 
 func main() {
-	switch os.Args[1] {
+	if len(os.Args) == 1 {
+		return
+	}
+
+	day := os.Args[1]
+
+	var path string
+	if len(os.Args) > 2 {
+		path = os.Args[2]
+	}
+
+	switch day {
 	case "1":
-		day1.Run()
+		day1.Run(path)
 	case "2":
-		day2.Run()
+		day2.Run(path)
 	case "3":
-		day3.Run()
+		day3.Run(path)
 	case "i":
 		infi.Run()
 	}

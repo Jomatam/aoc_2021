@@ -6,16 +6,23 @@ import (
 	"strconv"
 )
 
-func Run() {
-	lines := helpers.Getlines("day1/input.txt")
+const fallback = "day1/input.txt"
+
+func Run(path string) (int, int) {
+	lines := helpers.Getlines(path, fallback)
 	var values []int
 	for _, line := range lines {
 		value, _ := strconv.Atoi(line)
 		values = append(values, value)
 	}
 
-	fmt.Println(getincreases(values, 1))
-	fmt.Println(getincreases(values, 3))
+	one := getincreases(values, 1)
+	three := getincreases(values, 3)
+
+	fmt.Println(one)
+	fmt.Println(three)
+
+	return one, three
 }
 
 func getincreases(values []int, window int) int {

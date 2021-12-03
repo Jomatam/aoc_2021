@@ -7,13 +7,21 @@ import (
 	"strings"
 )
 
-func Run() {
-	lines := helpers.Getlines("day2/input.txt")
-	part_1(lines)
-	part_2(lines)
+const fallback = "day2/input.txt"
+
+func Run(path string) (int, int) {
+	lines := helpers.Getlines(path, fallback)
+
+	part1 := part_1(lines)
+	part2 := part_2(lines)
+
+	fmt.Println(part1)
+	fmt.Println(part2)
+
+	return part1, part2
 }
 
-func part_1(lines []string) {
+func part_1(lines []string) int {
 	x := 0
 	y := 0
 
@@ -32,10 +40,10 @@ func part_1(lines []string) {
 		}
 	}
 
-	fmt.Println(x * y)
+	return x * y
 }
 
-func part_2(lines []string) {
+func part_2(lines []string) int {
 	x := 0
 	y := 0
 	aim := 0
@@ -56,5 +64,5 @@ func part_2(lines []string) {
 		}
 	}
 
-	fmt.Println(x * y)
+	return x * y
 }
