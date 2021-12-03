@@ -9,7 +9,7 @@ import (
 )
 
 func Run() {
-	lines := helpers.Getlines("day2/input.txt")
+	lines := helpers.Getlines("infi/input.txt")
 	things := getthings(lines)
 	amounts := getamounts(things)
 	missing, _ := strconv.Atoi(strings.Split(lines[0], " ")[0])
