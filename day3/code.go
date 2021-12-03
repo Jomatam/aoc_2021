@@ -20,20 +20,20 @@ func Run(path string) (int, int) {
 		ints[i] = int(x)
 	}
 
-	gamma := mostleastcommon(ints, true)
-	epsilon := mostleastcommon(ints, false)
-	fmt.Println(gamma * epsilon)
+	g := mostLeastCommon(ints, true)
+	e := mostLeastCommon(ints, false)
+	fmt.Println(g * e)
 
-	o := getmostsimilar(ints, true)
-	c := getmostsimilar(ints, false)
+	o := getMostSimilar(ints, true)
+	c := getMostSimilar(ints, false)
 	fmt.Println(o * c)
 
-	return gamma * epsilon, o * c
+	return g * e, o * c
 }
 
-func getmostsimilar(ints []int, most bool) int {
+func getMostSimilar(ints []int, most bool) int {
 	for i := 0; i < bits; i++ {
-		t := mostleastcommon(ints, most)
+		t := mostLeastCommon(ints, most)
 		ints = filter(ints, t, i)
 		if len(ints) == 1 {
 			break
@@ -42,7 +42,7 @@ func getmostsimilar(ints []int, most bool) int {
 	return ints[0]
 }
 
-func mostleastcommon(ints []int, most bool) int {
+func mostLeastCommon(ints []int, most bool) int {
 	counts := make([]int, bits)
 	for bit := 0; bit < bits; bit++ {
 		mask := 1 << (bits - bit - 1)

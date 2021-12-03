@@ -16,8 +16,8 @@ func Run(path string) (int, int) {
 		values = append(values, value)
 	}
 
-	one := getincreases(values, 1)
-	three := getincreases(values, 3)
+	one := getNumberOfIncreases(values, 1)
+	three := getNumberOfIncreases(values, 3)
 
 	fmt.Println(one)
 	fmt.Println(three)
@@ -25,7 +25,7 @@ func Run(path string) (int, int) {
 	return one, three
 }
 
-func getincreases(values []int, window int) int {
+func getNumberOfIncreases(values []int, window int) int {
 	result := 0
 	for i, value := range values[window:] {
 		if value > values[i] {
