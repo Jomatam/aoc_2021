@@ -12,3 +12,5 @@ The project contains unit tests based on my input files. This allows you to make
  DISCLAIMERS:
  1. This is my first attempt dabbling in Go. As such, please do not use it as an example of idiomatic go. It is not. Feedback would be most welcome.
  2. I omitted error handling, since it is not so relevant for the scope of this project
+
+TODO: change the file handling to be able to run in a github action as well. Currently the way file paths are constructed fails in this context
