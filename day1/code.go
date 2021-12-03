@@ -6,10 +6,10 @@ import (
 	"strconv"
 )
 
-const fallback = "day1/input.txt"
+const fallback = "https://raw.githubusercontent.com/Jomatam/aoc_2021/main/day1/input.txt"
 
 func Run(path string) (int, int) {
-	lines := helpers.Getlines(path, fallback)
+	lines := helpers.GetFile(fallback)
 	var values []int
 	for _, line := range lines {
 		value, _ := strconv.Atoi(line)
