@@ -12,6 +12,10 @@ const fallback = "day3/input.txt"
 
 func Run(path string) (int, int) {
 	lines := helpers.Getlines(path, fallback)
+	return run(lines)
+}
+
+func run(lines []string) (int, int) {
 	bits = len(lines[0])
 
 	ints := make([]int, len(lines))

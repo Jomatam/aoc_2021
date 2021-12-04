@@ -5,13 +5,14 @@ import (
 )
 
 func TestResult(t *testing.T) {
-	part1, part2 := Run("")
+	var input = []string{"forward 5", "down 5", "forward 8", "up 3", "down 8", "forward 2"}
+	part1, part2 := run(input)
 
-	if part1 != 2215080 {
+	if part1 != 150 {
 		t.Fatalf("Run with default input failed at part 1")
 	}
 
-	if part2 != 1864715580 {
+	if part2 != 900 {
 		t.Fatalf("Run with default input failed at part 2")
 	}
 }

@@ -6,14 +6,18 @@ import (
 	"strconv"
 )
 
-const fallback = "https://raw.githubusercontent.com/Jomatam/aoc_2021/main/day1/input.txt"
+const fallback = "day1/input.txt"
 
 func Run(path string) (int, int) {
-	lines := helpers.GetFile(fallback)
-	var values []int
-	for _, line := range lines {
+	lines := helpers.Getlines(path, fallback)
+	return run(lines)
+}
+
+func run(lines []string) (int, int) {
+	values := make([]int, len(lines))
+	for i, line := range lines {
 		value, _ := strconv.Atoi(line)
-		values = append(values, value)
+		values[i] = value
 	}
 
 	one := getNumberOfIncreases(values, 1)

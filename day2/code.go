@@ -11,7 +11,10 @@ const fallback = "day2/input.txt"
 
 func Run(path string) (int, int) {
 	lines := helpers.Getlines(path, fallback)
+	return run(lines)
+}
 
+func run(lines []string) (int, int) {
 	part1 := part_1(lines)
 	part2 := part_2(lines)
 
