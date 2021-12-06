@@ -1,5 +1,5 @@
-# aoc_2021
-Advent of Code 2021, experiment in learning Go
+# Advent of Code 2021 in Go
+Experiment in learning Go
  
 To run, open a terminal in the root folder of the project and run with
 1. `go run . <day to run> <optional relative input path>`
