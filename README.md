@@ -1,4 +1,4 @@
-# Advent of Code 2021 in Go
+# Advent of Code 2021, Go
 Experiment in learning Go
  
 To run, open a terminal in the root folder of the project and run with
