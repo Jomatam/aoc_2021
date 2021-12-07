@@ -7,12 +7,12 @@ import (
 	"strings"
 )
 
-const fallback = "day4/input.txt"
+const path = "day4/input.txt"
 
 type card = []map[int]bool
 
-func Run(path string) (int, int) {
-	lines := helpers.Getlines(path, fallback)
+func Run() (int, int) {
+	lines := helpers.Getlines(path)
 	return run(lines)
 }
 

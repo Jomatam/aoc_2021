@@ -8,10 +8,10 @@ import (
 
 var bits int
 
-const fallback = "day3/input.txt"
+const path = "day3/input.txt"
 
-func Run(path string) (int, int) {
-	lines := helpers.Getlines(path, fallback)
+func Run() (int, int) {
+	lines := helpers.Getlines(path)
 	return run(lines)
 }
 

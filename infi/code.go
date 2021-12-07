@@ -11,7 +11,7 @@ import (
 const path = "infi/input.txt"
 
 func Run() {
-	lines := helpers.Getlines(path, path)
+	lines := helpers.Getlines(path)
 	things := getthings(lines)
 	amounts := getamounts(things)
 	missing, _ := strconv.Atoi(strings.Split(lines[0], " ")[0])

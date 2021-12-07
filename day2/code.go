@@ -7,10 +7,10 @@ import (
 	"strings"
 )
 
-const fallback = "day2/input.txt"
+const path = "day2/input.txt"
 
-func Run(path string) (int, int) {
-	lines := helpers.Getlines(path, fallback)
+func Run() (int, int) {
+	lines := helpers.Getlines(path)
 	return run(lines)
 }
 

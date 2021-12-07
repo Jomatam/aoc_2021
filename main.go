@@ -19,26 +19,21 @@ func main() {
 
 	day := os.Args[1]
 
-	var path string
-	if len(os.Args) > 2 {
-		path = os.Args[2]
-	}
-
 	switch day {
 	case "1":
-		day1.Run(path)
+		day1.Run()
 	case "2":
-		day2.Run(path)
+		day2.Run()
 	case "3":
-		day3.Run(path)
+		day3.Run()
 	case "4":
-		day4.Run(path)
+		day4.Run()
 	case "5":
-		day5.Run(path)
+		day5.Run()
 	case "6":
-		day6.Run(path)
+		day6.Run()
 	case "7":
-		day7.Run(path)
+		day7.Run()
 	case "i":
 		infi.Run()
 	}

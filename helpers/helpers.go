@@ -7,11 +7,7 @@ import (
 	"strings"
 )
 
-func Getlines(path string, fallback string) []string {
-	if path == "" {
-		path = fallback
-	}
-
+func Getlines(path string) []string {
 	_, b, _, _ := runtime.Caller(0)
 	fullpath := filepath.Join(filepath.Dir(b), "..\\", path)
 	data, _ := os.ReadFile(fullpath)

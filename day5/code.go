@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-const fallback = "day5/input.txt"
+const path = "day5/input.txt"
 
 type key struct {
 	X, Y int
@@ -16,8 +16,8 @@ type key struct {
 var match = "([0-9]+)"
 var regex, _ = regexp.Compile(fmt.Sprintf("%s,%s -> %s,%s", match, match, match, match))
 
-func Run(path string) (int, int) {
-	lines := helpers.Getlines(path, fallback)
+func Run() (int, int) {
+	lines := helpers.Getlines(path)
 	return run(lines)
 }
 
