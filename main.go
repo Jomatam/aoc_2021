@@ -8,6 +8,7 @@ import (
 	"aoc_2021/day5"
 	"aoc_2021/day6"
 	"aoc_2021/day7"
+	"aoc_2021/day8"
 	"aoc_2021/infi"
 	"os"
 )
@@ -34,6 +35,8 @@ func main() {
 		day6.Run()
 	case "7":
 		day7.Run()
+	case "8":
+		day8.Run()
 	case "i":
 		infi.Run()
 	}
