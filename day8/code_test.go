@@ -16,14 +16,16 @@ func TestResult(t *testing.T) {
 		"bdfegc cbegaf gecbf dfcage bdacg ed bedf ced adcbefg gebcd | ed bcgafe cdgba cbgef",
 		"egadfb cdbfeg cegd fecab cgb gbdefca cg fgcdab egfdb bfceg | gbdfcae bgc cg cgb",
 		"gcafb gcf dcaebfg ecagb gf abcdeg gaef cafbge fdbac fegbdc | fgae cfgab fg bagce"}
+	expected1 := 26
+	expected2 := 61229
 
 	part1, part2 := run(input)
 
-	if part1 != 26 {
-		t.Fatalf("Run with default input failed at part 1")
+	if part1 != expected1 {
+		t.Fatalf("Run with default input failed at part 1. Expected %d, returned %d", expected1, part2)
 	}
 
-	if part2 != 61229 {
-		t.Fatalf("Run with default input failed at part 2")
+	if part2 != expected2 {
+		t.Fatalf("Run with default input failed at part 2. Expected %d, returned %d", expected2, part2)
 	}
 }

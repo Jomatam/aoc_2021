@@ -25,14 +25,16 @@ func TestResult(t *testing.T) {
 		"18  8 23 26 20",
 		"22 11 13  6  5",
 		" 2  0 12  3  7"}
+	expected1 := 4512
+	expected2 := 1924
 
 	part1, part2 := run(input)
 
-	if part1 != 4512 {
-		t.Fatalf("Run with default input failed at part 1")
+	if part1 != expected1 {
+		t.Fatalf("Run with default input failed at part 1. Expected %d, returned %d", expected1, part2)
 	}
 
-	if part2 != 1924 {
-		t.Fatalf("Run with default input failed at part 2")
+	if part2 != expected2 {
+		t.Fatalf("Run with default input failed at part 2. Expected %d, returned %d", expected2, part2)
 	}
 }
